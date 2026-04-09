@@ -13,6 +13,9 @@ rsschannellang=${rsschannellang:-"en-us"}
 bpfinal=$(echo "${bptemplate/rss-channel-lang/$rsschannellang}")
 
 bpfinal=$(echo "${bpfinal/rss-channel-title/$rsschanneltitle}")
+
+# Has to execute twice.
+wpfinal=$(echo "${wpfinal/rss-channel-title/$rsschanneltitle}")
 wpfinal=$(echo "${wpfinal/rss-channel-title/$rsschanneltitle}")
 
 bpfinal=$(echo "${bpfinal/rss-channel-description/$rsschanneldescription}")
