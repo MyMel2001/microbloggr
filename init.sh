@@ -1,3 +1,4 @@
+#!/bin/bash
 fname="feed.xml"
 
 bptemplate=$(cat "template.xml.dontchange")
@@ -23,4 +24,4 @@ echo $bpfinal > $fname
 echo $wpfinal > index.html
 
 echo Done generating boilerplate, now making first post...
-./post.sh
+bash post.sh

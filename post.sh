@@ -1,3 +1,5 @@
+#!/bin/bash
+
 posttemplate=$(cat "post-template.xml.dontchange")
 webtemplate=$(cat "post-template.html.xml.dontchange")
 fname="feed.xml"
@@ -25,7 +27,7 @@ postfinal=$(echo "${postfinal/post-date/$rsspostdate}")
 wpostfinal=$(echo "${wpostfinal/post-date/$rsspostdate}")
 
 oldcontent=$(cat $fname)
-oldcontentwww=$(cat $fname)
+oldcontentwww=$(cat $pname)
 echo "${oldcontent/'</channel>'/$postfinal}" > $fname
 echo "${oldcontentwww/'</body>'/$wpostfinal}" > $pname
 
