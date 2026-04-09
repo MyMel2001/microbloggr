@@ -1,4 +1,3 @@
-read -p "Enter filename [feed.xml]: " fname
 fname="feed.xml"
 
 bptemplate=$(cat "template.xml.dontchange")
